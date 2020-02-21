@@ -1,7 +1,7 @@
 {
     "name": "Pause123456",
     "refId": "1",
-    "requisiteStageRefIds": {{ var "requisiteStageRefIds" ?: [] }},
+    "requisiteStageRefIds": [],
     "type": "wait",
-    "waitTime": {{ var "waitTime" ?: 300 }}
+    "waitTime": 5
 }
