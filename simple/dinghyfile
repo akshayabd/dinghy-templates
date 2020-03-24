@@ -1,0 +1,64 @@
+{
+  "application": "spin",
+  "pipelines": [
+    {
+      "application": "spin",
+      "name": "pipeline123456",
+      "keepWaitingPipelines": false,
+      "lastModifiedBy": "admin",
+      "limitConcurrent": true,
+      "parameterConfig": [
+        {
+          "default": "tag1",
+          "hasOptions": false,
+          "name": "imageTag",
+          "pinned": false,
+          "required": true
+        },
+        {
+          "default": "version1",
+          "hasOptions": false,
+          "name": "chartVersion",
+          "pinned": false,
+          "required": true
+        }
+      ],
+      "stages": [
+        {
+          "name": "Pause12456",
+          "refId": "1",
+          "requisiteStageRefIds": [],
+          "type": "wait",
+          "waitTime": 10
+        },
+        {
+          "failPipeline": true,
+          "judgmentInputs": [],
+          "name": "Manual Judgment",
+          "notifications": [],
+          "refId": "2",
+          "requisiteStageRefIds": [
+            "1"
+          ],
+          "type": "manualJudgment"
+        }
+      ],
+      "triggers": [],
+      "notifications": [
+        {
+          "address": "akshay-test",
+          "level": "pipeline",
+          "type": "slack",
+          "message": {
+            "pipeline.starting": {
+              "text": "Image Tag: ${ parameters.imageTag }\nChart Version: ${ parameters.chartVersion }"
+            }
+          },
+          "when": [
+            "pipeline.starting"
+          ]
+        }
+      ]
+    }
+  ]
+}
