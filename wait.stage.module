@@ -1,5 +1,5 @@
 {
-    "name": "Pausing",
+    "name": "Pause",
     "refId": "1",
     "requisiteStageRefIds": [],
     "type": "wait",
