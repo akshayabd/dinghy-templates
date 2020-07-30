@@ -1,0 +1,17 @@
+  "globals": {
+    "save_app_on_update": true
+  },
+  "spec": {
+    "notifications": {
+      "slack": [
+        {
+          "when": [
+            "pipeline.complete",
+            "pipeline.failed",
+            "pipeline.starting"
+          ],
+          "address": "{{ var "slack-channel" ?: "akshay-test" }}"
+        }
+      ]
+    }
+  }
