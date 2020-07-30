@@ -1,7 +1,5 @@
-  "globals": {
-    "save_app_on_update": true
-  },
-  "spec": {
+
+  {
     "notifications": {
       "slack": [
         {
