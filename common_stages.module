@@ -1,4 +1,4 @@
-  "stages": [
+
     {
       "name": "Waiting",
       "refId": "1",
@@ -17,4 +17,4 @@
       ],
       "type": "manualJudgment"
     }
-  ]
+
