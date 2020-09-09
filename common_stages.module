@@ -3,7 +3,7 @@
       "refId": "1",
       "requisiteStageRefIds": [],
       "type": "wait",
-      "waitTime": "{{ var "waitTime" ?: 5 }}"
+      "waitTime": "{{ var "waitTime" ?: 3 }}"
     },
     {
       "failPipeline": true,
