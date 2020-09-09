@@ -8,7 +8,7 @@
             "pipeline.failed",
             "pipeline.starting"
           ],
-          "address": "{{ var "slack-channel" ?: "akshay-test2" }}"
+          "address": "{{ var "slack-channel" ?: "akshay-test" }}"
         }
       ]
     }
